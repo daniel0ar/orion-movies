@@ -1,0 +1,49 @@
+{
+    "movies": [
+        {
+            "id": 1,
+            "title": "Movie 1",
+            "thumbnail": "/src/assets/img/movie-1.jpeg",
+            "rating": "E",
+            "genre": "Horror",
+            "cast": ["Ryan Gosling","Margot Robbie"],
+            "release": "01/03/2012" 
+        },
+        {
+            "id": 2,
+            "title": "Movie 2",
+            "thumbnail": "/src/assets/img/movie-2.jpeg",
+            "rating": "E",
+            "genre": "Horror",
+            "cast": ["Ryan Gosling","Margot Robbie"],
+            "release": "01/03/2012" 
+        },
+        {
+            "id": 3,
+            "title": "Movie 3",
+            "thumbnail": "/src/assets/img/movie-3.jpeg",
+            "rating": "E",
+            "genre": "Horror",
+            "cast": ["Ryan Gosling","Margot Robbie"],
+            "release": "01/03/2012" 
+        },
+        {
+            "id": 4,
+            "title": "Movie 4",
+            "thumbnail": "/src/assets/img/movie-4.jpeg",
+            "rating": "E",
+            "genre": "Horror",
+            "cast": ["Ryan Gosling","Margot Robbie"],
+            "release": "01/03/2012" 
+        },
+        {
+            "id": 5,
+            "title": "Movie 5",
+            "thumbnail": "/src/assets/img/movie-5.jpeg",
+            "rating": "E",
+            "genre": "Horror",
+            "cast": ["Ryan Gosling","Margot Robbie"],
+            "release": "01/03/2012" 
+        }
+    ]
+}
