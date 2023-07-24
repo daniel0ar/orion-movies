@@ -1,37 +1,41 @@
-import React, { Component } from 'react';
-import axios from 'axios';
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import './App.css';
 
-import MovieList from "./components/MovieList";
+// Using react router to standarize routes based on folder structure
+// as seen in: https://dev.to/franciscomendes10866/file-based-routing-using-vite-and-react-router-3fdo
+const components = import.meta.glob("./components/**/*.jsx", { eager: true });
 
-class App extends Component {
-
-  constructor() {
-    super();
-    this.state = {movies: [], selectedMovie: null};
-    this.movieSearch("");
+const routes = [];
+for (const path of Object.keys(components)) {
+  const fileName = path.match(/\.\/components\/(.*)\.jsx$/)?.[1];
+  
+  if (!fileName) {
+    continue;
   }
 
-  movieSearch(term) {
-    axios.get('http://localhost:3031/movies')
-    .then(res => 
-        this.setState({
-          movies: res.data,
-          selectedMovie: res.data[0]
-        })
-      ).catch(err => console.log(err))
-  }
+  const normalizedPathName = fileName.includes("$")
+    ? fileName.replace("$", ":")
+    : fileName.replace(/\/index/, "");
 
-  render() {
-    return (
-      <div className="container mx-auto px-4">
-        <h1>Orion Movies</h1>
-        <MovieList
-          onMovieSelect={selectedMovie => this.state = {selectedMovie}} 
-          movies={this.state.movies}></MovieList>
-      </div>
-    )
-  }
+    routes.push({
+      path: fileName === "index" ? "/" : `/${normalizedPathName.toLowerCase()}`,
+      Element: components[path].default,
+      loader: components[path]?.loader,
+      action: components[path]?.action,
+      ErrorBoundary: components[path]?.ErrorBoundary,
+    });
+}
+
+const router = createBrowserRouter(
+  routes.map(({ Element, ErrorBoundary, ...rest }) => ({
+    ...rest,
+    element: <Element />,
+    ...(ErrorBoundary && { errorElement: <ErrorBoundary /> }),
+  }))
+);
+
+const App = () => {
+  return <RouterProvider router={router} />;
 }
 
 export default App;

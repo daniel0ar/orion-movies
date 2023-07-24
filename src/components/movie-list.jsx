@@ -1,10 +1,8 @@
 import React from "react";
-import MovieListItem from "./MovieListItem";
+import MovieListItem from "./movie-list-item";
 
 const MovieList = (props) => {
     const movieItems = props.movies.map((movie) => {
-        console.log("Peli:")
-        console.log(movie);
         return <MovieListItem 
             onMovieSelect={props.onMovieSelect}
             key={movie.id}
