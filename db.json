@@ -2,48 +2,71 @@
     "movies": [
         {
             "id": 1,
-            "title": "Movie 1",
+            "title": "Holmes & Watson",
             "thumbnail": "/src/assets/img/movie-1.jpeg",
-            "rating": "E",
-            "genre": "Horror",
-            "cast": ["Ryan Gosling","Margot Robbie"],
-            "release": "01/03/2012" 
+            "rating": "3",
+            "genre": "Comedy",
+            "cast": [
+                "Will Ferrell",
+                "John C. Reilly"
+            ],
+            "release": "2018-12-25"
         },
         {
             "id": 2,
-            "title": "Movie 2",
+            "title": "House at the End of the Street",
             "thumbnail": "/src/assets/img/movie-2.jpeg",
-            "rating": "E",
+            "rating": "5",
             "genre": "Horror",
-            "cast": ["Ryan Gosling","Margot Robbie"],
-            "release": "01/03/2012" 
+            "cast": [
+                "Jennifer Lawrence"
+            ],
+            "release": "2018-09-21"
         },
         {
             "id": 3,
-            "title": "Movie 3",
+            "title": "Dr. Who: Season 2",
             "thumbnail": "/src/assets/img/movie-3.jpeg",
-            "rating": "E",
-            "genre": "Horror",
-            "cast": ["Ryan Gosling","Margot Robbie"],
-            "release": "01/03/2012" 
+            "rating": "4",
+            "genre": "Drama",
+            "cast": [
+                "Tom Baker",
+                "Elisabeth Sladen",
+                "Ian Marter"
+            ],
+            "release": "1974-12-28"
         },
         {
             "id": 4,
-            "title": "Movie 4",
+            "title": "The Order",
             "thumbnail": "/src/assets/img/movie-4.jpeg",
-            "rating": "E",
-            "genre": "Horror",
-            "cast": ["Ryan Gosling","Margot Robbie"],
-            "release": "01/03/2012" 
+            "rating": "4",
+            "genre": "Action",
+            "cast": [
+                "Jean-Claude Van Damme"
+            ],
+            "release": "2001-12-13"
         },
         {
             "id": 5,
-            "title": "Movie 5",
+            "title": "Apocalypse",
             "thumbnail": "/src/assets/img/movie-5.jpeg",
             "rating": "E",
             "genre": "Horror",
-            "cast": ["Ryan Gosling","Margot Robbie"],
-            "release": "01/03/2012" 
+            "cast": [
+                "Ryan Gosling",
+                "Margot Robbie"
+            ],
+            "release": "2012-02-01"
+        },
+        {
+            "title": "New Movie",
+            "genre": "Action",
+            "rating": "5",
+            "release": "2016-08-02",
+            "cast": [],
+            "thumbnail": "/src/assets/img/movie-default.jpeg",
+            "id": 6
         }
     ]
 }

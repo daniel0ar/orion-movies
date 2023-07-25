@@ -25,7 +25,7 @@ class Index extends Component {
       return (
         <div className="container mx-auto px-4">
           <h1>Orion Movies</h1>
-          <a type="button" href = "/new"
+          <a type="button" href="/new"
             className="cursor-pointer py-2 px-3 rounded-md shadow bg-indigo-600 hover:bg-indigo-700">
             New
           </a>
