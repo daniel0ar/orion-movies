@@ -28,7 +28,7 @@ const Index = () => {
             }).catch(err => console.log(err))
     };
 
-    const movieSearchWait = _.debounce((term) => {movieSearch(term)},300);
+    const movieSearchWait = _.debounce((term) => {movieSearch(term)},200);
 
     return (
         <div className="container mx-auto px-4">
