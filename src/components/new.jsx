@@ -20,7 +20,7 @@ class New extends Component {
       "rating": e.target.rating.value,
       "release": e.target.release.value,
       "cast": [],
-      "thumbnail": "/src/assets/img/movie-default.jpeg"
+      "thumbnail": "/src/assets/img/thumbs/movie-default.jpeg"
     };
 
     axios.post('http://localhost:3031/movies', movie)

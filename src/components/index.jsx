@@ -18,7 +18,7 @@ const Index = () => {
         client.get('?_limit=10').then((res) => {
            setMovies(res.data);
         });
-     }, []);
+    }, []);
     
 
     const movieSearch = (term) => {
@@ -28,7 +28,7 @@ const Index = () => {
             }).catch(err => console.log(err))
     };
 
-    const movieSearchWait = _.debounce((term) => {movieSearch(term)},200);
+    const movieSearchWait = _.debounce((term) => {movieSearch(term)},250);
 
     return (
         <div className="container mx-auto px-4">
