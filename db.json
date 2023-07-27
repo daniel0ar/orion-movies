@@ -64,25 +64,6 @@
         "Stuart Lafferty"
       ],
       "release": "2010-02-01"
-    },
-    {
-      "title": "New Movie",
-      "genre": "Action",
-      "rating": "5",
-      "release": "2016-08-02",
-      "cast": [],
-      "thumbnail": "/src/assets/img/thumbs/movie-default.jpeg",
-      "banner": "/src/assets/img/movie-1-lg.jpeg",
-      "id": 6
-    },
-    {
-      "title": "Thor",
-      "genre": "Action",
-      "rating": "5",
-      "release": "2023-07-11",
-      "cast": [],
-      "thumbnail": "/src/assets/img/movie-default.jpeg",
-      "id": 7
     }
   ]
 }

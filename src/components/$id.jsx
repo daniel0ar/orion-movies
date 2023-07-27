@@ -17,6 +17,13 @@ const MovieDetail = () => {
         });
     }, []);
 
+    const deleteMovie = () => {
+        client.delete(window.location.pathname).then((res) => {
+            console.log(res);
+            window.location = '/';
+        });
+    };
+
     if (!selectedMovie) {
         return <div>Loading...</div>;
     }
@@ -35,6 +42,9 @@ const MovieDetail = () => {
                 <p>Release: {selectedMovie.release}</p>
                 <p>Stars: {selectedMovie.cast}</p>
             </div>
+            <button className="shadow bg-red-500 hover:bg-red-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" onClick={deleteMovie}>
+                Delete
+            </button>
         </div>
     );
 }
