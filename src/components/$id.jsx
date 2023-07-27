@@ -32,7 +32,7 @@ const MovieDetail = () => {
         <div className="bg-cover ax-w-lg mx-auto h-80" style={{backgroundImage: `url(${selectedMovie.banner})` }}>
             <div className="mt-40">
                 <div className="container mx-auto px-4">
-                    <a className="shadow bg-violet-500 hover:bg-violet-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" href="/">
+                    <a className="mt-9 px-5 py-2.5 bg-violet-600 hover:bg-violet-700 rounded-lg text-center font-medium inline-block text-white" href="/">
                         Go Back
                     </a>
                     <div className="mt-8">
@@ -43,7 +43,7 @@ const MovieDetail = () => {
                             <p>Stars: {selectedMovie.cast}</p>
                         </div>
                     </div>
-                    <button className="mt-5 shadow bg-red-500 hover:bg-red-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" onClick={deleteMovie}>
+                    <button className="mt-9 px-5 py-2.5 bg-red-600 hover:bg-red-700 rounded-lg text-center font-medium inline-block text-white" onClick={deleteMovie}>
                         Delete
                     </button>
                 </div>
