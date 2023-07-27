@@ -26,7 +26,8 @@ class New extends Component {
 		axios.post('http://localhost:3031/movies', movie)
 			.then(res => {
 				console.log(res.data.id);
-			}).catch(err => console.log(err))
+				window.location = '/';
+			}).catch(err => console.log(err));
 	}
 
 	render() {

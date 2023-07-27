@@ -1,6 +1,6 @@
 import React from 'react';
 
-const MovieListItem = ({movie, onMovieSelect}) => {
+const MovieListItem = ({movie}) => {
 
     return (
         <a href={`${movie.id}`}>

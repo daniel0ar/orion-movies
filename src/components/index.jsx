@@ -7,24 +7,85 @@ import SearchBar from "./search-bar";
 
 const Index = () => {
 
-    const [ movies, setMovies] = useState([]);
-    const [ selectedMovie, setSelectedMovie] = useState();
+    const [ movies_toprated, setMoviesTopRated] = useState([]);
+    const [ movies_genre, setMoviesGenre] = useState([]);
+    const [ movies_allsorted, setMoviesAll] = useState([]);
+    const [ message, setMessage] = useState([]);
+    const [ title_toprated, setTitleTopRated] = useState([]);
+    const [ title_genre, setTitleGenre] = useState([]);
+    const [ title_allsorted, setTitleAll] = useState([]);
 
     const client = axios.create({
         baseURL: "http://localhost:3031/movies" 
     });
 
     useEffect(() => {
-        client.get('?_limit=10').then((res) => {
-           setMovies(res.data);
+
+        setTitles();
+
+        getMovies('?_sort=title', setMoviesAll);
+        getMovies('?_sort=rating', setMoviesTopRated);
+        getMovies('?_sort=genre', setMoviesGenre);
+
+        client.get().then((res) => {
+            if(res.data.length > 0 ) {
+                setMoviesTopRated(res.data);
+                setMessage("");
+            }
+            else {
+                setMoviesTopRated([]);
+                setMessage("No movies to display");
+            }
         });
     }, []);
+
+    const getMovies = (criteria, setMoviesFunction) => {
+        client.get(criteria).then((res) => {
+            if(res.data.length > 0 ) {
+                setMoviesFunction(res.data);
+                setMessage("");
+            }
+            else {
+                clearMovies();
+                setMessage("No movies to display");
+            }
+        });
+    }
+
+    const clearMovies = () => {
+        setMoviesTopRated([]);
+        setMoviesGenre([]);
+        setMoviesAll([]);
+    };
+
+    const setTitles = () => {
+        setTitleTopRated("Top Rated");
+        setTitleGenre("By Genre");
+        setTitleAll("All Movies (A-Z)");
+    };
+
+    const clearTitles = () => {
+        setTitleTopRated([]);
+        setTitleGenre([]);
+        setTitleAll([]);
+    };
     
 
     const movieSearch = (term) => {
+        clearTitles();
+        setTitleAll("Results");
+
         client.get(`?title_like=${term}`)
             .then((res) => {
-                setMovies(res.data);
+                if(res.data.length > 0 ) {
+                    clearMovies();
+                    setMoviesAll(res.data);
+                    setMessage("");
+                }
+                else {
+                    clearMovies();
+                    setMessage("No movies match the search");
+                }
             }).catch(err => console.log(err))
     };
 
@@ -38,9 +99,9 @@ const Index = () => {
                 New
             </a>
             <SearchBar onSearchTermChange={movieSearchWait}></SearchBar>
-            <MovieList
-                onMovieSelect={selectedMovie => setSelectedMovie(selectedMovie)}
-                movies={movies}></MovieList>
+            <MovieList movies={movies_toprated} message={""} title={title_toprated}></MovieList>
+            <MovieList movies={movies_genre} message={""} title={title_genre}></MovieList>
+            <MovieList movies={movies_allsorted} message={message} title={title_allsorted}></MovieList>
         </div>
     )
 }

@@ -5,7 +5,7 @@
       "title": "Holmes & Watson",
       "thumbnail": "/src/assets/img/thumbs/movie-1.jpeg",
       "banner": "/src/assets/img/movie-1-lg.jpeg",
-      "rating": "3",
+      "rating": "3.6",
       "genre": "Comedy",
       "cast": [
         "Will Ferrell",
@@ -18,7 +18,7 @@
       "title": "House at the End of the Street",
       "thumbnail": "/src/assets/img/thumbs/movie-2.jpeg",
       "banner": "/src/assets/img/movie-2-lg.jpeg",
-      "rating": "5",
+      "rating": "2.3",
       "genre": "Horror",
       "cast": [
         "Jennifer Lawrence"
@@ -30,7 +30,7 @@
       "title": "Dr. Who: Season 12",
       "thumbnail": "/src/assets/img/thumbs/movie-3.jpeg",
       "banner": "/src/assets/img/movie-3-lg.jpeg",
-      "rating": "4",
+      "rating": "4.1",
       "genre": "Drama",
       "cast": [
         "Tom Baker",
@@ -56,7 +56,7 @@
       "title": "Apocalypse",
       "thumbnail": "/src/assets/img/thumbs/movie-5.jpeg",
       "banner": "/src/assets/img/movie-5-lg.jpeg",
-      "rating": "E",
+      "rating": "4.2",
       "genre": "Action",
       "cast": [
         "Rhett Giles",
@@ -64,6 +64,46 @@
         "Stuart Lafferty"
       ],
       "release": "2010-02-01"
+    },
+    {
+      "id": 6,
+      "title": "The Great Adventure",
+      "thumbnail": "/src/assets/img/thumbs/movie-6.jpeg",
+      "banner": "/src/assets/img/movie-2-lg.jpeg",
+      "rating": "4.5",
+      "genre": "Action",
+      "cast": [
+        "Chris Evans",
+        "Scarlett Johansson",
+        "Tom Holland"
+      ],
+      "release": "2022-06-10"
+    },
+    {
+      "id": 7,
+      "title": "Crazy Romance",
+      "thumbnail": "/src/assets/img/thumbs/movie-7.jpeg",
+      "banner": "/src/assets/img/movie-3-lg.jpeg",
+      "rating": "4",
+      "genre": "Romance",
+      "cast": [
+        "Emma Stone",
+        "Ryan Gosling"
+      ],
+      "release": "2020-02-14"
+    },
+    {
+      "id": 8,
+      "title": "The Mysterious Island",
+      "thumbnail": "/src/assets/img/thumbs/movie-8.jpeg",
+      "banner": "/src/assets/img/movie-4-lg.jpeg",
+      "rating": "3.8",
+      "genre": "Adventure",
+      "cast": [
+        "Dwayne Johnson",
+        "Emily Blunt"
+      ],
+      "release": "2019-07-20"
     }
   ]
 }
