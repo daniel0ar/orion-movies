@@ -7,35 +7,35 @@ const components = import.meta.glob("./components/**/*.jsx", { eager: true });
 
 const routes = [];
 for (const path of Object.keys(components)) {
-  const fileName = path.match(/\.\/components\/(.*)\.jsx$/)?.[1];
-  
-  if (!fileName) {
-    continue;
-  }
+    const fileName = path.match(/\.\/components\/(.*)\.jsx$/)?.[1];
 
-  const normalizedPathName = fileName.includes("$")
-    ? fileName.replace("$", ":")
-    : fileName.replace(/\/index/, "");
+    if (!fileName) {
+        continue;
+    }
+
+    const normalizedPathName = fileName.includes("$")
+        ? fileName.replace("$", ":")
+        : fileName.replace(/\/index/, "");
 
     routes.push({
-      path: fileName === "index" ? "/" : `/${normalizedPathName.toLowerCase()}`,
-      Element: components[path].default,
-      loader: components[path]?.loader,
-      action: components[path]?.action,
-      ErrorBoundary: components[path]?.ErrorBoundary,
+        path: fileName === "index" ? "/" : `/${normalizedPathName.toLowerCase()}`,
+        Element: components[path].default,
+        loader: components[path]?.loader,
+        action: components[path]?.action,
+        ErrorBoundary: components[path]?.ErrorBoundary,
     });
 }
 
 const router = createBrowserRouter(
-  routes.map(({ Element, ErrorBoundary, ...rest }) => ({
-    ...rest,
-    element: <Element />,
-    ...(ErrorBoundary && { errorElement: <ErrorBoundary /> }),
-  }))
+    routes.map(({ Element, ErrorBoundary, ...rest }) => ({
+        ...rest,
+        element: <Element />,
+        ...(ErrorBoundary && { errorElement: <ErrorBoundary /> }),
+    }))
 );
 
 const App = () => {
-  return <RouterProvider router={router} />;
+    return <RouterProvider router={router} />;
 }
 
 export default App;
