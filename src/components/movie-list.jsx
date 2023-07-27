@@ -26,7 +26,7 @@ const MovieList = (props) => {
                 }
             </div>
             <p>{message}</p>
-            <div className={`mt-4 grid grid-cols-2 gap-y-5 sm:grid-cols-${pageSize} gap-x-5`}>
+            <div className={`mt-4 grid grid-cols-2 gap-y-5 sm:grid-cols-8 gap-x-5`}>
                 {movieItems}
             </div>
         </div>
