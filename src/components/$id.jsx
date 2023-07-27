@@ -29,22 +29,25 @@ const MovieDetail = () => {
     }
 
     return (
-        <div>
-            <div className="img-container">
-                <img src={selectedMovie.banner} alt="banner" />
+        <div className="bg-cover ax-w-lg mx-auto h-80" style={{backgroundImage: `url(${selectedMovie.banner})` }}>
+            <div className="mt-40">
+                <div className="container mx-auto px-4">
+                    <a className="shadow bg-violet-500 hover:bg-violet-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" href="/">
+                        Go Back
+                    </a>
+                    <div className="mt-8">
+                        <h1 className="mt-8">{selectedMovie.title}</h1>
+                        <div className="mt-10">
+                            <h3>Rating: {selectedMovie.rating}</h3>
+                            <p>Release: {selectedMovie.release}</p>
+                            <p>Stars: {selectedMovie.cast}</p>
+                        </div>
+                    </div>
+                    <button className="mt-5 shadow bg-red-500 hover:bg-red-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" onClick={deleteMovie}>
+                        Delete
+                    </button>
+                </div>
             </div>
-            <a className="shadow bg-purple-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" href="/">
-                Go Back
-            </a>
-            <div className="container mx-auto px-4">
-                <h1>{selectedMovie.title}</h1>
-                <h3>Rating: {selectedMovie.rating}</h3>
-                <p>Release: {selectedMovie.release}</p>
-                <p>Stars: {selectedMovie.cast}</p>
-            </div>
-            <button className="shadow bg-red-500 hover:bg-red-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" onClick={deleteMovie}>
-                Delete
-            </button>
         </div>
     );
 }

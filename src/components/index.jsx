@@ -19,6 +19,8 @@ const Index = () => {
         baseURL: "http://localhost:3031/movies" 
     });
 
+    const pageSize = 8;
+
     useEffect(() => {
 
         setTitles();
@@ -27,21 +29,11 @@ const Index = () => {
         getMovies('?_sort=rating', setMoviesTopRated);
         getMovies('?_sort=genre', setMoviesGenre);
 
-        client.get().then((res) => {
-            if(res.data.length > 0 ) {
-                setMoviesTopRated(res.data);
-                setMessage("");
-            }
-            else {
-                setMoviesTopRated([]);
-                setMessage("No movies to display");
-            }
-        });
     }, []);
 
     const getMovies = (criteria, setMoviesFunction) => {
         client.get(criteria).then((res) => {
-            if(res.data.length > 0 ) {
+            if(res.data.length > 0) {
                 setMoviesFunction(res.data);
                 setMessage("");
             }
@@ -92,16 +84,18 @@ const Index = () => {
     const movieSearchWait = _.debounce((term) => {movieSearch(term)},250);
 
     return (
-        <div className="container mx-auto px-4">
-            <h1>Orion Movies</h1>
+        <div>
             <a type="button" href="/new"
-                className="cursor-pointer py-2 px-3 rounded-md shadow bg-indigo-600 hover:bg-indigo-700">
+                className="mt-9 px-5 py-2.5 bg-violet-600 hover:bg-violet-700 rounded-lg text-center font-medium inline-block text-white">
                 New
             </a>
             <SearchBar onSearchTermChange={movieSearchWait}></SearchBar>
-            <MovieList movies={movies_toprated} message={""} title={title_toprated}></MovieList>
-            <MovieList movies={movies_genre} message={""} title={title_genre}></MovieList>
-            <MovieList movies={movies_allsorted} message={message} title={title_allsorted}></MovieList>
+            <MovieList movies={movies_toprated} message={""} 
+                title={title_toprated} pageSize={pageSize}></MovieList>
+            <MovieList movies={movies_genre} message={""} 
+                title={title_genre} pageSize={pageSize}></MovieList>
+            <MovieList movies={movies_allsorted} message={message} 
+                title={title_allsorted} pageSize={pageSize}></MovieList>
         </div>
     )
 }
