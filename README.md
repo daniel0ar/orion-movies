@@ -1,6 +1,6 @@
 # DMovies (Test Project)
 
-![home screen](https://github.com/daniel0ar/orion-movies/blob/main/home-screen.png?raw=true)
+![home screen](https://github.com/daniel0ar/orion-movies/blob/main/public/home-screen.png?raw=true)
 
 ## Description
 
