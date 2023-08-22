@@ -25,9 +25,9 @@ const Index = () => {
 
         setTitles();
 
-        getMovies('?_sort=title', setMoviesAll);
-        getMovies('?_sort=rating', setMoviesTopRated);
-        getMovies('?_sort=genre', setMoviesGenre);
+        getMovies('?_sort=title&_page=1', setMoviesAll);
+        getMovies('?_sort=rating&_page=1', setMoviesTopRated);
+        getMovies('?_sort=genre&_page=1', setMoviesGenre);
 
     }, []);
 

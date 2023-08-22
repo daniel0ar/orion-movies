@@ -1,4 +1,6 @@
-# Orion Movies (Test Project)
+# DMovies (Test Project)
+
+![home screen](https://github.com/daniel0ar/orion-movies/blob/main/home-screen.jpg?raw=true)
 
 ## Description
 

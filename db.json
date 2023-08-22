@@ -104,6 +104,137 @@
         "Emily Blunt"
       ],
       "release": "2019-07-20"
+    },
+    {
+      "id": 9,
+      "title": "Inception",
+      "thumbnail": "/src/assets/img/thumbs/movie-9.jpeg",
+      "banner": "/src/assets/img/movie-9-lg.jpeg",
+      "rating": "4.9",
+      "genre": "Science Fiction",
+      "cast": [
+        "Leonardo DiCaprio",
+        "Tom Hardy",
+        "Ellen Page"
+      ],
+      "release": "2010-07-16"
+    },
+    {
+      "id": 10,
+      "title": "The Last Samurai",
+      "thumbnail": "/src/assets/img/thumbs/movie-10.jpeg",
+      "banner": "/src/assets/img/movie-10-lg.jpeg",
+      "rating": "4.6",
+      "genre": "Drama",
+      "cast": [
+        "Tom Cruise",
+        "Ken Watanabe"
+      ],
+      "release": "2003-12-05"
+    },
+    {
+      "id": 11,
+      "title": "The Secret Life of Walter Mitty",
+      "thumbnail": "/src/assets/img/thumbs/movie-11.jpeg",
+      "banner": "/src/assets/img/movie-11-lg.jpeg",
+      "rating": "4.3",
+      "genre": "Adventure",
+      "cast": [
+        "Ben Stiller",
+        "Kristen Wiig"
+      ],
+      "release": "2013-12-25"
+    },
+    {
+      "id": 12,
+      "title": "The Martian",
+      "thumbnail": "/src/assets/img/thumbs/movie-12.jpeg",
+      "banner": "/src/assets/img/movie-12-lg.jpeg",
+      "rating": "4.7",
+      "genre": "Sci-Fi",
+      "cast": [
+        "Matt Damon",
+        "Jessica Chastain"
+      ],
+      "release": "2015-10-02"
+    },
+    {
+      "id": 13,
+      "title": "Pulp Fiction",
+      "thumbnail": "/src/assets/img/thumbs/movie-13.jpeg",
+      "banner": "/src/assets/img/movie-13-lg.jpeg",
+      "rating": "4.8",
+      "genre": "Crime",
+      "cast": [
+        "John Travolta",
+        "Samuel L. Jackson"
+      ],
+      "release": "1994-10-14"
+    },
+    {
+      "id": 14,
+      "title": "La La Land",
+      "thumbnail": "/src/assets/img/thumbs/movie-14.jpeg",
+      "banner": "/src/assets/img/movie-14-lg.jpeg",
+      "rating": "4.5",
+      "genre": "Musical",
+      "cast": [
+        "Ryan Gosling",
+        "Emma Stone"
+      ],
+      "release": "2016-12-09"
+    },
+    {
+      "id": 15,
+      "title": "The Shawshank Redemption",
+      "thumbnail": "/src/assets/img/thumbs/movie-15.jpeg",
+      "banner": "/src/assets/img/movie-15-lg.jpeg",
+      "rating": "4.9",
+      "genre": "Drama",
+      "cast": [
+        "Tim Robbins",
+        "Morgan Freeman"
+      ],
+      "release": "1994-09-23"
+    },
+    {
+      "id": 16,
+      "title": "The Dark Knight",
+      "thumbnail": "/src/assets/img/thumbs/movie-16.jpeg",
+      "banner": "/src/assets/img/movie-16-lg.jpeg",
+      "rating": "4.9",
+      "genre": "Action",
+      "cast": [
+        "Christian Bale",
+        "Heath Ledger"
+      ],
+      "release": "2008-07-18"
+    },
+    {
+      "id": 17,
+      "title": "Avatar",
+      "thumbnail": "/src/assets/img/thumbs/movie-17.jpeg",
+      "banner": "/src/assets/img/movie-17-lg.jpeg",
+      "rating": "4.7",
+      "genre": "Science Fiction",
+      "cast": [
+        "Sam Worthington",
+        "Zoe Saldana"
+      ],
+      "release": "2009-12-18"
+    },
+    {
+      "id": 18,
+      "title": "Gladiator",
+      "thumbnail": "/src/assets/img/thumbs/movie-18.jpeg",
+      "banner": "/src/assets/img/movie-18-lg.jpeg",
+      "rating": "4.6",
+      "genre": "Action",
+      "cast": [
+        "Russell Crowe",
+        "Joaquin Phoenix"
+      ],
+      "release": "2000-05-05"
     }
   ]
 }
